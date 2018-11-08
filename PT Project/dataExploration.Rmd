@@ -22,6 +22,62 @@ load("~/Downloads/data/USage.RData")
 USdata <- filter(data, country == 'US')
 USage <- filter(USdata, age < 100)
 ```
+
+<div class="titles">Personality Tests DataSource/Bibliography</div>
+
+<br>
+
+<div class="link_citing">
+  “Assessment & Selection Other Assessment Methods.” 
+  *U.S. Office of Personnel Management*, 2018,
+  https://www.opm.gov/policy-data-oversight/assessment-and-selection/other-assessment-methods/personality-tests/.
+</div>
+
+We chose to use this article in our bibliography/data source because it contains crucial insight on the personality traits most frequently assessed in work situations. This article argues that it is ill-advised to use a measure that taps only on one specific dimension. Instead, job performance outcomes are best predicted by a combination of personality measures. We find this interesting because it is a reference that can lead us to further research on personality tests. This article can help us formulate our argument against the weapon of math destruction that is the personality test. 
+
+<br>
+
+<div class="link_citing">
+  “Big Five Personality Test Traits.” 
+  *123test*, 10 Sept. 2018, 
+  https://www.123test.com/big-five-personality-theory/.
+</div>
+
+This website describes how in a personality test the Five Factor Model (FFM) and the global factors of personality may also be used to reference the Big Five traits. We chose this source because every personality trait is broken down and defined clearly. The Big Five traits are even visually explained through the use of diagrams. 
+
+<br>
+
+<div class="link_citing">
+  Martin, Whitney. “The Problem with Using Personality Tests for Hiring.” 
+  *Harvard Business Review*, 6 Dec. 2017, 
+  https://hbr.org/2014/08/the-problem-with-using-personality-tests-for-hiring.
+</div>
+
+This article from the Harvard Business Review demonstrates the most effective hiring selection practices and those that don’t work well. We chose this article because there is a diagram that shows the most effective hiring selection practices based on validity coefficients ranging from 0 to 1. The higher the number, the higher the correlation between test scores and predicted job performance. The results show that personality tests have a lower correlation. This article has valuable information that helps us understand which hiring processes use the most effective measures when predicting job performance. 
+
+<br>
+
+<div class="link_citing">
+  “Open Psychology Data: Raw Data from Online Personality Tests.” 
+  *MACH-IV: Machiavellianism Test*, Open Source Psychometrics Project, 
+  https://openpsychometrics.org/_rawdata/. 
+</div>
+
+We chose this data source because it provides multiple collections of raw data from online personality tests taken by real people from different regions internationally. The data collections also contain data from test takers ranging from a variety of different age groups. This data will be used in order to compare the personality types most attributed to different job roles. Additionally, we are able to see the similarities and differences within the questions asked to the test takers and see how their answers affect the results of the tests.
+
+<br>
+
+<div class="link_citing">
+  Schmitt, David, et al. “The Geographic Distribution of Big Five Personality Traits Patterns and Profiles of Human Self-Description Across 56 Nations.”, vol. 38, no. 2, Mar. 2007, 
+  https://www.researchgate.net/publication/230766917_The_geographic_distribution_of_Big_Five_personality_traits.
+</div>
+
+This article contains numerous figures and an ample amount of data on the Big 5 personality traits patterns across 56 different nations. Schmitt et al. even mention problems in comparing personality trait scores across cultures. This source will be helpful when comparing our data because this article has previous large-scale studies of personality traits across cultures. The authors successfully explain what the “Big Five” traits of human personality are and how they are used in personality tests. 
+
+<br>
+
+<div class="titles"> Data Exploration</div>
+
 <p>We decided to focus soley on the US demographic of the data
    
    Then we decided to breakdown that data further and create
@@ -33,7 +89,7 @@ USage <- filter(USdata, age < 100)
    
 <div class="headers">1 Dimensional Data Exploration</div>
    
-<div class="titles">Gender</div>
+<div class="headers">Gender</div>
    
 ```{R}
 ggplot(data = USdata) + 
@@ -47,7 +103,9 @@ ggplot(data = USdata) +
 
 <p>This graph shows the different genders the personality test takers identified themselves as. Genders included men, women and other. This information is important because it demonstrates how diverse the measure of the Big-Five personality traits turned out based on the gender of the participants.</p>
 
-<div class="titles">Age</div>
+<br>
+
+<div class="headers">Age</div>
 
 ```{R}
 ggplot(data = USage) +
@@ -77,7 +135,9 @@ ggplot(data = USage) +
       caption="Source: https://openpsychometrics.org/_rawdata/")
 ```
 
-<div class="titles">Race</div>
+<br>
+
+<div class="headers">Race</div>
 
 ```{R}
 ggplot(data = USdata) +
